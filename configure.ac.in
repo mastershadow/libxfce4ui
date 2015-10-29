@@ -6,7 +6,7 @@ dnl ***************************
 dnl *** Version information ***
 dnl ***************************
 m4_define([libxfce4ui_verinfo], [0:0:0])
-m4_define([libxfce4ui_version_api], [1])
+m4_define([libxfce4ui_version_api], [2])
 m4_define([libxfce4ui_version_major], [4])
 m4_define([libxfce4ui_version_minor], [13])
 m4_define([libxfce4ui_version_micro], [0])
@@ -16,7 +16,7 @@ m4_define([libxfce4ui_version_tag], [git])
 m4_define([libxfce4ui_version], [libxfce4ui_version_major().libxfce4ui_version_minor().libxfce4ui_version_micro()ifelse(libxfce4ui_version_nano(), [], [], [.libxfce4ui_version_nano()])ifelse(libxfce4ui_version_tag(), [git], [libxfce4ui_version_tag()-libxfce4ui_version_build()], [libxfce4ui_version_tag()])])
 
 m4_define([libxfce4kbd_private_verinfo], [0:0:0])
-m4_define([libxfce4kbd_private_version_api], [2])
+m4_define([libxfce4kbd_private_version_api], [3])
 
 dnl # DO NOT MODIFY ANYTHING BELOW THIS LINE, UNLESS YOU KNOW WHAT
 dnl # YOU ARE DOING.
@@ -126,16 +126,8 @@ dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
 XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.30.0])
-XDT_CHECK_PACKAGE([GTK2], [gtk+-2.0], [2.24.0])
+XDT_CHECK_PACKAGE([GTK3], [gtk+-3.0], [3.14.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.12.0])
-
-dnl ***********************************************************
-dnl *** Optional support for a GTK+3 version of the library ***
-dnl ***********************************************************
-XDT_CHECK_OPTIONAL_PACKAGE([GTK3],
-                           [gtk+-3.0], [3.2.0], [gtk3],
-                           [GTK+ 3 support])
-AM_CONDITIONAL([ENABLE_GTK3_LIBRARY], [test "x$GTK3_FOUND" = "xyes"])
 
 dnl *************************************************
 dnl *** Optional support for startup notification ***

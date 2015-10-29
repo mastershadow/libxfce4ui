@@ -45,52 +45,13 @@ libxfce4ui_sources = \
 	xfce-spawn.c \
 	xfce-titled-dialog.c
 
-libxfce4ui_includedir = \
-	$(includedir)/xfce4/libxfce4ui-$(LIBXFCE4UI_VERSION_API)/libxfce4ui
-
-libxfce4ui_include_HEADERS = \
-	$(libxfce4ui_headers)
-
-lib_LTLIBRARIES = libxfce4ui-1.la
-
-libxfce4ui_1_la_SOURCES = \
-	$(libxfce4ui_sources)
-
-libxfce4ui_1_la_CFLAGS = \
-	$(LIBSM_CFLAGS) \
-	$(GTK2_CFLAGS) \
-	$(LIBSTARTUP_NOTIFICATION_CFLAGS) \
-	$(LIBXFCE4UTIL_CFLAGS) \
-	$(PLATFORM_CFLAGS)
-
-libxfce4ui_1_la_LDFLAGS = \
-	-version-info $(LIBXFCE4UI_VERINFO) \
-	-export-symbols-regex "^[^_].*" \
-	-no-undefined \
-	$(LIBSM_LDFLAGS) \
-	$(PLATFORM_LDFLAGS)
-
-libxfce4ui_1_la_LIBADD = \
-	$(LIBSM_LIBS) \
-	$(GTK2_LIBS) \
-	$(LIBSTARTUP_NOTIFICATION_LIBS) \
-	$(LIBXFCE4UTIL_LIBS)
-
-pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = libxfce4ui-1.pc
-
-##
-## GTK+ 3 support library
-##
-if ENABLE_GTK3_LIBRARY
-
 libxfce4ui2_includedir = \
-	$(includedir)/xfce4/libxfce4ui-2/libxfce4ui
+	$(includedir)/xfce4/libxfce4ui-$(LIBXFCE4UI_VERSION_API)/libxfce4ui
 
 libxfce4ui2_include_HEADERS = \
 	$(libxfce4ui_headers)
 
-lib_LTLIBRARIES += libxfce4ui-2.la
+lib_LTLIBRARIES = libxfce4ui-2.la
 
 libxfce4ui_2_la_SOURCES = \
 	$(libxfce4ui_sources)
@@ -115,9 +76,8 @@ libxfce4ui_2_la_LIBADD = \
 	$(LIBSTARTUP_NOTIFICATION_LIBS) \
 	$(LIBXFCE4UTIL_LIBS)
 
-pkgconfig_DATA += libxfce4ui-2.pc
-
-endif
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = libxfce4ui-$(LIBXFCE4UI_VERSION_API).pc
 
 ##
 ## Rules to auto-generate built sources

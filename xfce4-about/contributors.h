@@ -36,14 +36,15 @@ ContributorGroup;
 static const ContributorInfo xfce_contributors_core[] =
 {
   { "Andrzej Radecki", "ndrwrdck@gmail.com" },
+  { "Eduard Roccatello", "eduard@xfce.org" },
   { "Eric Koegel", "eric@xfce.org" },
   { "Harald Judt", "hjudt@xfce.org" },
   { "Landry Breuil", "landry@xfce.org" },
   { "Nick Schermer", "nick@xfce.org" },
   { "Olivier Fourdan", "fourdan@xfce.org" },
+  { "Peter de Ridder", "peter@xfce.org" },
   { "Sean Davis", "bluesabre@xfce.org" },
   { "Simon Steinbeiß", "simon@xfce.org" },
-  { "Peter de Ridder", "peter@xfce.org" },
   { NULL, NULL}
 };
 
@@ -94,7 +95,6 @@ static const ContributorInfo xfce_contributors_previous[] =
   { "Darren Salt", "linux@youmustbejoking.demon.co.uk" },
   { "David Mohr", "squisher@xfce.org" },
   { "Edscott Wilson García", "edscott@xfce.org" },
-  { "Eduard Roccatello", "eduard@xfce.org" },
   { "Ejvend Nielsen", "prophet@sphere-x.net" },
   { "Enrico Tröger", "enrico.troeger@uvena.de" },
   { "Erik Harrison", "erikharrison@xfce.org" },

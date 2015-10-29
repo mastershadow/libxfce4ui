@@ -20,7 +20,7 @@ xfce4_about_SOURCES = \
 
 xfce4_about_CFLAGS = \
 	$(LIBXFCE4UTIL_CFLAGS) \
-	$(GTK2_CFLAGS) \
+	$(GTK3_CFLAGS) \
 	$(PLATFORM_CFLAGS)
 
 xfce4_about_LDADD = \

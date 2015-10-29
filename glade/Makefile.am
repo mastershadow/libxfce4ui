@@ -31,7 +31,7 @@ libxfce4uiglade_la_LDFLAGS = \
 	$(PLATFORM_LDFLAGS)
 
 libxfce4uiglade_la_LIBADD = \
-	$(top_builddir)/libxfce4ui/libxfce4ui-1.la \
+	$(top_builddir)/libxfce4ui/libxfce4ui-$(LIBXFCE4UI_VERSION_API).la \
 	$(LIBXFCE4UTIL_LIBS) \
 	$(GLADEUI_LIBS)
 
